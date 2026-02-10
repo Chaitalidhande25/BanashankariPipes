@@ -2,60 +2,69 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Request For Quote</title>
+<title>Web to Lead – RFQ</title>
 
 <style>
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #eaf3ff;
+    background: #e6f0ff;
   }
 
-  .container {
-    max-width: 1000px;
+  .wrapper {
+    max-width: 1050px;
     margin: 30px auto;
     display: flex;
-    background: #d9eaff;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
-  /* LEFT PANEL (LOGO) */
+  /* SIDE PANEL */
   .side-panel {
-    width: 30%;
-    background: #ffffff;
+    width: 32%;
+    background: #9aa3ad; /* matched grey-blue */
+    color: white;
+    padding: 40px 25px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    padding: 30px;
+    gap: 15px;
   }
 
   .side-panel img {
-    max-width: 220px;
+    max-width: 200px;
+    margin-bottom: 15px;
+  }
+
+  .company-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .office-text {
+    font-size: 14px;
+    line-height: 1.6;
   }
 
   /* FORM PANEL */
   .form-panel {
-    width: 70%;
+    width: 68%;
+    background: #dceaff;
     padding: 30px 40px;
   }
 
-  h2 {
-    text-align: center;
-    color: #d00000;
-    margin-bottom: 25px;
-  }
-
   h4 {
-    margin: 25px 0 10px;
-    border-bottom: 1px solid #999;
-    padding-bottom: 5px;
+    margin: 22px 0 12px;
+    border-bottom: 1px solid #8fa6c3;
+    padding-bottom: 6px;
+    color: #1f3b63;
   }
 
   .row {
     display: flex;
     gap: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   .form-group {
@@ -63,17 +72,17 @@
   }
 
   label {
-    display: block;
     font-size: 13px;
     margin-bottom: 4px;
+    display: block;
   }
 
   input, textarea {
     width: 100%;
-    padding: 7px;
-    border: 1px solid #999;
+    padding: 7px 8px;
     border-radius: 4px;
-    background: #fff;
+    border: 1px solid #9aa9c0;
+    background: #ffffff;
   }
 
   textarea {
@@ -93,9 +102,9 @@
   }
 
   .remove-btn {
-    color: red;
     cursor: pointer;
-    font-size: 20px;
+    color: #cc0000;
+    font-size: 18px;
   }
 
   .add-btn {
@@ -105,16 +114,17 @@
     padding: 6px 14px;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 5px;
   }
 
   .submit-btn {
     margin-top: 25px;
     width: 100%;
-    padding: 10px;
+    padding: 11px;
     background: #2e8b2e;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 15px;
     cursor: pointer;
   }
@@ -123,17 +133,23 @@
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-  <!-- LEFT LOGO -->
+  <!-- SIDE PANEL -->
   <div class="side-panel">
     <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5" alt="Logo">
+
+    <div class="company-name">Hycon India Ltd.</div>
+
+    <div class="office-text">
+      <strong>Corporate Office:</strong><br>
+      INFRA EMC, Infopark Expressway,<br>
+      Kakkanad, Kochi – 682039
+    </div>
   </div>
 
-  <!-- FORM -->
+  <!-- FORM PANEL -->
   <div class="form-panel">
-
-    <h2>Request For Quote</h2>
 
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
           method="POST">
@@ -173,7 +189,7 @@
       <!-- PRODUCT INTERESTED -->
       <h4>Product Interested</h4>
       <div class="form-group">
-        <input type="text" name="Product_Interested__c" placeholder="e.g. MS Pipes, SS Sheets">
+        <input type="text" name="Product_Interested__c" placeholder="e.g. MS Pipes, Valves">
       </div>
 
       <!-- ADDRESS -->
@@ -204,7 +220,7 @@
         <input type="text" name="zip">
       </div>
 
-      <!-- PRODUCTS REQUESTED -->
+      <!-- PRODUCTS -->
       <h4>Products Requested</h4>
       <div id="products">
         <div class="product-row">
@@ -225,14 +241,14 @@
 
 <script>
   function addRow() {
-    const div = document.createElement('div');
-    div.className = 'product-row';
-    div.innerHTML = `
+    const row = document.createElement('div');
+    row.className = 'product-row';
+    row.innerHTML = `
       <input type="text" placeholder="Product Name">
       <input type="number" placeholder="Quantity">
       <span class="remove-btn" onclick="removeRow(this)">✖</span>
     `;
-    document.getElementById('products').appendChild(div);
+    document.getElementById('products').appendChild(row);
   }
 
   function removeRow(el) {
