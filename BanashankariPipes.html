@@ -11,47 +11,57 @@ body {
     background: #eef5ff;
 }
 
-/* Page container */
-.page {
-    max-width: 760px;           /* REDUCED WIDTH */
-    margin: 25px auto;
+/* Outer wrapper */
+.wrapper {
+    max-width: 900px;
+    margin: 30px auto;
+    display: flex;
+    border-radius: 14px;
+    overflow: hidden;
     background: #d9eaff;
-    border-radius: 12px;
-    padding: 22px 30px;         /* REDUCED PADDING */
 }
 
-/* Logo */
-.logo {
-    text-align: center;
-    margin-bottom: 5px;
+/* Left logo panel */
+.side-panel {
+    width: 260px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo img {
-    height: 90px;               /* BIGGER LOGO */
+.side-panel img {
+    max-width: 180px;
+}
+
+/* Form panel */
+.form-panel {
+    flex: 1;
+    padding: 25px 35px;
 }
 
 /* Title */
 h1 {
     text-align: center;
     color: red;
-    font-size: 18px;            /* SMALLER TITLE */
-    margin: 6px 0 18px;
+    font-size: 18px;
+    margin: 5px 0 18px;
 }
 
 /* Section titles */
 .section-title {
     font-weight: bold;
     font-size: 13px;
-    margin: 16px 0 8px;
+    margin: 18px 0 10px;
     border-bottom: 1px solid #999;
     padding-bottom: 4px;
 }
 
-/* Grid layout */
+/* Grid */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;                  /* BETTER COLUMN GAP */
+    gap: 22px;                 /* FIXED GAP */
 }
 
 .full {
@@ -67,29 +77,31 @@ label {
 
 input, textarea {
     width: 100%;
-    padding: 6px 8px;           /* SMALLER INPUTS */
+    padding: 7px 9px;
     border-radius: 4px;
     border: 1px solid #999;
+    background: #ffffff;       /* FIX CONNECTED LOOK */
     font-size: 12px;
+    margin-bottom: 10px;       /* FIX SPACING */
 }
 
 textarea {
     resize: vertical;
 }
 
-/* Products section */
+/* Products */
 .product-row {
     display: grid;
     grid-template-columns: 2fr 1fr 28px;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .remove-btn {
     color: red;
-    cursor: pointer;
     font-size: 16px;
+    cursor: pointer;
     text-align: center;
 }
 
@@ -97,21 +109,20 @@ textarea {
     background: #1e63c6;
     color: #fff;
     border: none;
-    padding: 6px 12px;
+    padding: 6px 14px;
+    font-size: 12px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
-    margin-top: 4px;
 }
 
 /* Submit */
 .submit-btn {
-    margin-top: 18px;
     width: 100%;
+    margin-top: 18px;
     background: #2f8f2f;
     color: #fff;
     border: none;
-    padding: 9px;
+    padding: 10px;
     font-size: 13px;
     border-radius: 4px;
     cursor: pointer;
@@ -121,104 +132,107 @@ textarea {
 
 <body>
 
-<div class="page">
+<div class="wrapper">
 
-    <!-- LOGO -->
-    <div class="logo">
+    <!-- LEFT LOGO PANEL -->
+    <div class="side-panel">
         <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5&d=/a/Ka000001mHff/9Jx0w1WRKldz5f9B6qWuPmQuNOwVXr7JFmphDvtRobg&operationContext=DELIVERY&viewId=05HKa000005EQngMAG&dpt=">
     </div>
 
-    <h1>Request For Quote</h1>
+    <!-- FORM PANEL -->
+    <div class="form-panel">
 
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKa00000EKrFN" method="POST">
+        <h1>Request For Quote</h1>
 
-        <input type="hidden" name="oid" value="00DKa00000EKrFN">
-        <input type="hidden" name="retURL" value="http://google.com">
-        <input type="hidden" name="00NKa00000XXXXXX" id="productsField">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKa00000EKrFN" method="POST">
 
-        <!-- CONTACT -->
-        <div class="section-title">Contact Information</div>
-        <div class="grid">
-            <div>
-                <label>First Name</label>
-                <input name="first_name">
-            </div>
-            <div>
-                <label>Last Name</label>
-                <input name="last_name">
-            </div>
-            <div>
-                <label>Email</label>
-                <input name="email">
-            </div>
-            <div>
-                <label>Phone</label>
-                <input name="phone">
-            </div>
-            <div class="full">
-                <label>Company</label>
-                <input name="company">
-            </div>
-        </div>
+            <input type="hidden" name="oid" value="00DKa00000EKrFN">
+            <input type="hidden" name="retURL" value="http://google.com">
+            <input type="hidden" name="00NKa00000XXXXXX" id="productsField">
 
-        <!-- SERVICE -->
-        <div class="section-title">Service Interested</div>
-        <input placeholder="e.g. Steel Supply, Fabrication">
-
-        <!-- ADDRESS -->
-        <div class="section-title">Address Details</div>
-        <div class="grid">
-            <div>
-                <label>Country</label>
-                <input name="country">
+            <!-- CONTACT -->
+            <div class="section-title">Contact Information</div>
+            <div class="grid">
+                <div>
+                    <label>First Name</label>
+                    <input name="first_name">
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input name="last_name">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input name="email">
+                </div>
+                <div>
+                    <label>Phone</label>
+                    <input name="phone">
+                </div>
+                <div class="full">
+                    <label>Company</label>
+                    <input name="company">
+                </div>
             </div>
-            <div>
-                <label>State</label>
-                <input name="state">
-            </div>
-            <div class="full">
-                <label>City</label>
-                <input name="city">
-            </div>
-            <div class="full">
-                <label>Street</label>
-                <textarea name="street"></textarea>
-            </div>
-            <div class="full">
-                <label>Pincode</label>
-                <input name="zip">
-            </div>
-        </div>
 
-        <!-- PRODUCTS -->
-        <div class="section-title">Products Requested</div>
+            <!-- SERVICE -->
+            <div class="section-title">Service Interested</div>
+            <input placeholder="e.g. Steel Supply, Fabrication">
 
-        <div id="products">
-            <div class="product-row">
-                <input class="pname" placeholder="Product Name">
-                <input class="pqty" type="number" placeholder="Quantity">
-                <span class="remove-btn" onclick="removeRow(this)">✖</span>
+            <!-- ADDRESS -->
+            <div class="section-title">Address Details</div>
+            <div class="grid">
+                <div>
+                    <label>Country</label>
+                    <input name="country">
+                </div>
+                <div>
+                    <label>State</label>
+                    <input name="state">
+                </div>
+                <div class="full">
+                    <label>City</label>
+                    <input name="city">
+                </div>
+                <div class="full">
+                    <label>Street</label>
+                    <textarea name="street"></textarea>
+                </div>
+                <div class="full">
+                    <label>Pincode</label>
+                    <input name="zip">
+                </div>
             </div>
-        </div>
 
-        <button type="button" class="add-btn" onclick="addProduct()">+ Add Product</button>
+            <!-- PRODUCTS -->
+            <div class="section-title">Products Requested</div>
 
-        <!-- SUBMIT -->
-        <button type="submit" class="submit-btn">Submit Quote Request</button>
+            <div id="products">
+                <div class="product-row">
+                    <input class="pname" placeholder="Product Name">
+                    <input class="pqty" type="number" placeholder="Quantity">
+                    <span class="remove-btn" onclick="removeRow(this)">✖</span>
+                </div>
+            </div>
 
-    </form>
+            <button type="button" class="add-btn" onclick="addProduct()">+ Add Product</button>
+
+            <button type="submit" class="submit-btn">Submit Quote Request</button>
+
+        </form>
+    </div>
 </div>
 
 <script>
 function addProduct() {
-    const div = document.createElement("div");
-    div.className = "product-row";
-    div.innerHTML = `
+    const row = document.createElement("div");
+    row.className = "product-row";
+    row.innerHTML = `
         <input class="pname" placeholder="Product Name">
         <input class="pqty" type="number" placeholder="Quantity">
         <span class="remove-btn" onclick="removeRow(this)">✖</span>
     `;
-    document.getElementById("products").appendChild(div);
+    document.getElementById("products").appendChild(row);
 }
 
 function removeRow(el) {
