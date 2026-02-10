@@ -28,83 +28,94 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 40px 25px;
   text-align: center;
 }
 
 .left-panel img {
   max-width: 220px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .left-panel p {
   font-size: 14px;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* RIGHT PANEL */
 .right-panel {
   width: 65%;
   background: #dbeaff;
-  padding: 30px;
+  padding: 35px 40px;
 }
 
 .section-title {
   font-weight: bold;
-  margin: 20px 0 10px;
+  margin: 25px 0 15px;
   border-left: 4px solid #0b5ed7;
   padding-left: 10px;
+  font-size: 15px;
 }
 
 .row {
   display: flex;
-  gap: 15px;
-  margin-bottom: 12px;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #c9d4e5;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 textarea {
   resize: vertical;
+  min-height: 70px;
+  margin-bottom: 16px;
+}
+
+input:not(.submit-btn) {
+  margin-bottom: 16px;
 }
 
 .product-box {
   background: #f8fbff;
-  padding: 15px;
-  border-radius: 6px;
+  padding: 18px;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 .product-row {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .add-btn {
   background: #0b5ed7;
   color: #fff;
   border: none;
-  padding: 8px 14px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .submit-btn {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
   background: #198754;
   color: white;
   border: none;
-  padding: 12px;
+  padding: 14px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
 </style>
@@ -175,7 +186,6 @@ function prepareProducts() {
 
       <input type="text" name="company" placeholder="Company">
 
-      <!-- UPDATED ADDRESS DETAILS -->
       <div class="section-title">Address Details</div>
 
       <input type="text" name="country" placeholder="Country">
