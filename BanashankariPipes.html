@@ -8,48 +8,50 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #e8f1ff;
+    background: #eef5ff;
 }
 
 /* Page container */
 .page {
-    max-width: 900px;
-    margin: 30px auto;
-    background: #d6e8ff;
+    max-width: 760px;           /* REDUCED WIDTH */
+    margin: 25px auto;
+    background: #d9eaff;
     border-radius: 12px;
-    padding: 30px 40px;
+    padding: 22px 30px;         /* REDUCED PADDING */
 }
 
 /* Logo */
 .logo {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .logo img {
-    height: 60px;
+    height: 90px;               /* BIGGER LOGO */
 }
 
 /* Title */
 h1 {
     text-align: center;
     color: red;
-    margin: 10px 0 25px;
+    font-size: 18px;            /* SMALLER TITLE */
+    margin: 6px 0 18px;
 }
 
 /* Section titles */
 .section-title {
     font-weight: bold;
-    margin: 20px 0 10px;
+    font-size: 13px;
+    margin: 16px 0 8px;
     border-bottom: 1px solid #999;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 
 /* Grid layout */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 18px;                  /* BETTER COLUMN GAP */
 }
 
 .full {
@@ -58,17 +60,17 @@ h1 {
 
 /* Inputs */
 label {
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 4px;
     display: block;
 }
 
 input, textarea {
     width: 100%;
-    padding: 8px 10px;
+    padding: 6px 8px;           /* SMALLER INPUTS */
     border-radius: 4px;
     border: 1px solid #999;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 textarea {
@@ -78,16 +80,16 @@ textarea {
 /* Products section */
 .product-row {
     display: grid;
-    grid-template-columns: 2fr 1fr 30px;
-    gap: 15px;
+    grid-template-columns: 2fr 1fr 28px;
+    gap: 10px;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .remove-btn {
     color: red;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -95,21 +97,22 @@ textarea {
     background: #1e63c6;
     color: #fff;
     border: none;
-    padding: 7px 14px;
+    padding: 6px 12px;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 5px;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
 /* Submit */
 .submit-btn {
-    margin-top: 25px;
+    margin-top: 18px;
     width: 100%;
     background: #2f8f2f;
     color: #fff;
     border: none;
-    padding: 12px;
-    font-size: 15px;
+    padding: 9px;
+    font-size: 13px;
     border-radius: 4px;
     cursor: pointer;
 }
