@@ -5,249 +5,239 @@
 <title>Request For Quote</title>
 
 <style>
-body {
+  body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #eef5ff;
-}
+    background: #eaf3ff;
+  }
 
-/* Outer wrapper */
-.wrapper {
-    max-width: 900px;
+  .container {
+    max-width: 1000px;
     margin: 30px auto;
     display: flex;
-    border-radius: 14px;
-    overflow: hidden;
     background: #d9eaff;
-}
+    border-radius: 12px;
+    overflow: hidden;
+  }
 
-/* Left logo panel */
-.side-panel {
-    width: 260px;
+  /* LEFT PANEL (LOGO) */
+  .side-panel {
+    width: 30%;
     background: #ffffff;
     display: flex;
-    justify-content: center;
     align-items: center;
-}
+    justify-content: center;
+    padding: 30px;
+  }
 
-.side-panel img {
-    max-width: 180px;
-}
+  .side-panel img {
+    max-width: 220px;
+  }
 
-/* Form panel */
-.form-panel {
-    flex: 1;
-    padding: 25px 35px;
-}
+  /* FORM PANEL */
+  .form-panel {
+    width: 70%;
+    padding: 30px 40px;
+  }
 
-/* Title */
-h1 {
+  h2 {
     text-align: center;
-    color: red;
-    font-size: 18px;
-    margin: 5px 0 18px;
-}
+    color: #d00000;
+    margin-bottom: 25px;
+  }
 
-/* Section titles */
-.section-title {
-    font-weight: bold;
-    font-size: 13px;
-    margin: 18px 0 10px;
+  h4 {
+    margin: 25px 0 10px;
     border-bottom: 1px solid #999;
-    padding-bottom: 4px;
-}
+    padding-bottom: 5px;
+  }
 
-/* Grid */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;                 /* FIXED GAP */
-}
+  .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
 
-.full {
-    grid-column: span 2;
-}
+  .form-group {
+    flex: 1;
+  }
 
-/* Inputs */
-label {
-    font-size: 12px;
-    margin-bottom: 4px;
+  label {
     display: block;
-}
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
 
-input, textarea {
+  input, textarea {
     width: 100%;
-    padding: 7px 9px;
-    border-radius: 4px;
+    padding: 7px;
     border: 1px solid #999;
-    background: #ffffff;       /* FIX CONNECTED LOOK */
-    font-size: 12px;
-    margin-bottom: 10px;       /* FIX SPACING */
-}
+    border-radius: 4px;
+    background: #fff;
+  }
 
-textarea {
+  textarea {
     resize: vertical;
-}
+  }
 
-/* Products */
-.product-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr 28px;
-    gap: 12px;
+  /* PRODUCTS */
+  .product-row {
+    display: flex;
+    gap: 10px;
     align-items: center;
     margin-bottom: 10px;
-}
+  }
 
-.remove-btn {
+  .product-row input {
+    flex: 1;
+  }
+
+  .remove-btn {
     color: red;
-    font-size: 16px;
     cursor: pointer;
-    text-align: center;
-}
+    font-size: 20px;
+  }
 
-.add-btn {
-    background: #1e63c6;
-    color: #fff;
+  .add-btn {
+    background: #1e6bd6;
+    color: white;
     border: none;
     padding: 6px 14px;
-    font-size: 12px;
     border-radius: 4px;
     cursor: pointer;
-}
+  }
 
-/* Submit */
-.submit-btn {
+  .submit-btn {
+    margin-top: 25px;
     width: 100%;
-    margin-top: 18px;
-    background: #2f8f2f;
-    color: #fff;
-    border: none;
     padding: 10px;
-    font-size: 13px;
-    border-radius: 4px;
+    background: #2e8b2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
     cursor: pointer;
-}
+  }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-    <!-- LEFT LOGO PANEL -->
-    <div class="side-panel">
-        <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5&d=/a/Ka000001mHff/9Jx0w1WRKldz5f9B6qWuPmQuNOwVXr7JFmphDvtRobg&operationContext=DELIVERY&viewId=05HKa000005EQngMAG&dpt=">
-    </div>
+  <!-- LEFT LOGO -->
+  <div class="side-panel">
+    <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5" alt="Logo">
+  </div>
 
-    <!-- FORM PANEL -->
-    <div class="form-panel">
+  <!-- FORM -->
+  <div class="form-panel">
 
-        <h1>Request For Quote</h1>
+    <h2>Request For Quote</h2>
 
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKa00000EKrFN" method="POST">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+          method="POST">
 
-            <input type="hidden" name="oid" value="00DKa00000EKrFN">
-            <input type="hidden" name="retURL" value="http://google.com">
-            <input type="hidden" name="00NKa00000XXXXXX" id="productsField">
+      <input type="hidden" name="oid" value="00DKa00000EKrFN">
+      <input type="hidden" name="retURL" value="https://google.com">
 
-            <!-- CONTACT -->
-            <div class="section-title">Contact Information</div>
-            <div class="grid">
-                <div>
-                    <label>First Name</label>
-                    <input name="first_name">
-                </div>
-                <div>
-                    <label>Last Name</label>
-                    <input name="last_name">
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input name="email">
-                </div>
-                <div>
-                    <label>Phone</label>
-                    <input name="phone">
-                </div>
-                <div class="full">
-                    <label>Company</label>
-                    <input name="company">
-                </div>
-            </div>
+      <!-- CONTACT -->
+      <h4>Contact Information</h4>
+      <div class="row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="first_name">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" name="last_name">
+        </div>
+      </div>
 
-            <!-- SERVICE -->
-            <div class="section-title">Service Interested</div>
-            <input placeholder="e.g. Steel Supply, Fabrication">
+      <div class="row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" name="phone">
+        </div>
+      </div>
 
-            <!-- ADDRESS -->
-            <div class="section-title">Address Details</div>
-            <div class="grid">
-                <div>
-                    <label>Country</label>
-                    <input name="country">
-                </div>
-                <div>
-                    <label>State</label>
-                    <input name="state">
-                </div>
-                <div class="full">
-                    <label>City</label>
-                    <input name="city">
-                </div>
-                <div class="full">
-                    <label>Street</label>
-                    <textarea name="street"></textarea>
-                </div>
-                <div class="full">
-                    <label>Pincode</label>
-                    <input name="zip">
-                </div>
-            </div>
+      <div class="form-group">
+        <label>Company</label>
+        <input type="text" name="company">
+      </div>
 
-            <!-- PRODUCTS -->
-            <div class="section-title">Products Requested</div>
+      <!-- PRODUCT INTERESTED -->
+      <h4>Product Interested</h4>
+      <div class="form-group">
+        <input type="text" name="Product_Interested__c" placeholder="e.g. MS Pipes, SS Sheets">
+      </div>
 
-            <div id="products">
-                <div class="product-row">
-                    <input class="pname" placeholder="Product Name">
-                    <input class="pqty" type="number" placeholder="Quantity">
-                    <span class="remove-btn" onclick="removeRow(this)">✖</span>
-                </div>
-            </div>
+      <!-- ADDRESS -->
+      <h4>Address Details</h4>
+      <div class="row">
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" name="country">
+        </div>
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" name="state">
+        </div>
+      </div>
 
-            <button type="button" class="add-btn" onclick="addProduct()">+ Add Product</button>
+      <div class="form-group">
+        <label>City</label>
+        <input type="text" name="city">
+      </div>
 
-            <button type="submit" class="submit-btn">Submit Quote Request</button>
+      <div class="form-group">
+        <label>Street</label>
+        <textarea name="street"></textarea>
+      </div>
 
-        </form>
-    </div>
+      <div class="form-group">
+        <label>Pincode</label>
+        <input type="text" name="zip">
+      </div>
+
+      <!-- PRODUCTS REQUESTED -->
+      <h4>Products Requested</h4>
+      <div id="products">
+        <div class="product-row">
+          <input type="text" placeholder="Product Name">
+          <input type="number" placeholder="Quantity">
+          <span class="remove-btn" onclick="removeRow(this)">✖</span>
+        </div>
+      </div>
+
+      <button type="button" class="add-btn" onclick="addRow()">+ Add Product</button>
+
+      <button type="submit" class="submit-btn">Submit Quote Request</button>
+
+    </form>
+
+  </div>
 </div>
 
 <script>
-function addProduct() {
-    const row = document.createElement("div");
-    row.className = "product-row";
-    row.innerHTML = `
-        <input class="pname" placeholder="Product Name">
-        <input class="pqty" type="number" placeholder="Quantity">
-        <span class="remove-btn" onclick="removeRow(this)">✖</span>
+  function addRow() {
+    const div = document.createElement('div');
+    div.className = 'product-row';
+    div.innerHTML = `
+      <input type="text" placeholder="Product Name">
+      <input type="number" placeholder="Quantity">
+      <span class="remove-btn" onclick="removeRow(this)">✖</span>
     `;
-    document.getElementById("products").appendChild(row);
-}
+    document.getElementById('products').appendChild(div);
+  }
 
-function removeRow(el) {
+  function removeRow(el) {
     el.parentElement.remove();
-}
-
-document.querySelector("form").addEventListener("submit", function () {
-    let data = [];
-    document.querySelectorAll(".product-row").forEach(r => {
-        let n = r.querySelector(".pname").value;
-        let q = r.querySelector(".pqty").value;
-        if (n && q) data.push(`${n} (Qty: ${q})`);
-    });
-    document.getElementById("productsField").value = data.join(" | ");
-});
+  }
 </script>
 
 </body>
