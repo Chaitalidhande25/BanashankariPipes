@@ -46,7 +46,7 @@ body {
 /* RIGHT PANEL */
 .right-panel {
   width: 65%;
-  background: #dbeaff; /* LIGHT–MEDIUM BLUE (UNCHANGED) */
+  background: #dbeaff; /* light–medium blue (UNCHANGED) */
   padding: 30px;
 }
 
@@ -158,10 +158,8 @@ function prepareProducts() {
           method="POST"
           onsubmit="prepareProducts()">
 
-      <!-- ONLY CHANGE IS HERE -->
-      <input type="hidden" name="oid" value="00DKa00000EKrFN">
-      <input type="hidden" name="retURL"
-             value="https://chaitalidhande25.github.io/BanashankariPipes/Thank%20You.html">
+      <input type="hidden" name="oid" value="YOUR_ORG_ID">
+      <input type="hidden" name="retURL" value="https://chaitalidhande25.github.io/BanashankariPipes/Thank%20You.html">
 
       <div class="section-title">Contact Information</div>
 
@@ -178,6 +176,12 @@ function prepareProducts() {
       <input type="text" name="company" placeholder="Company">
 
       <div class="section-title">Address Details</div>
+
+      <!-- ADDED COUNTRY + PINCODE (ONLY ADDITION) -->
+      <div class="row">
+        <input type="text" name="country" placeholder="Country">
+        <input type="text" name="pincode" placeholder="Pincode">
+      </div>
 
       <div class="row">
         <input type="text" name="city" placeholder="City">
@@ -198,6 +202,7 @@ function prepareProducts() {
         <button type="button" class="add-btn" onclick="addProduct()">+ Add Product</button>
       </div>
 
+      <!-- REAL SALESFORCE FIELD -->
       <textarea id="Product_Interested__c"
                 name="Product_Interested__c"
                 hidden></textarea>
