@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Banashankari Pipes – Support Case</title>
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e9f2ff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 35%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 25px;
+  text-align: center;
+}
+
+.left-panel img {
+  max-width: 220px;
+  margin-bottom: 25px;
+}
+
+.left-panel p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 65%;
+  background: #dbeaff;
+  padding: 35px 40px;
+}
+
+.section-title {
+  font-weight: bold;
+  margin: 25px 0 15px;
+  border-left: 4px solid #0b5ed7;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #c9d4e5;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  width: 100%;
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5&d=/a/Ka000001mHff/9Jx0w1WRKldz5f9B6qWuPmQuNOwVXr7JFmphDvtRobg">
+    <p>
+      <strong>Banashankari Pipes Pvt. Ltd.</strong><br>
+      All rights reserved.<br><br>
+      Need help?<br>
+      support@banashankaripipes.com
+    </p>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DKa00000EKrFN"
+          method="POST">
+
+      <input type="hidden" name="orgid" value="00DKa00000EKrFN">
+
+      <!-- ✅ THANK YOU PAGE REDIRECT -->
+      <input type="hidden" name="retURL"
+             value="https://chaitalidhande25.github.io/BanashankariPipes/Thank%20You.html">
+
+      <input type="hidden" id="external" name="external" value="1">
+
+      <!-- CONTACT INFORMATION -->
+      <div class="section-title">Contact Information</div>
+
+      <input type="text" id="name" name="name" placeholder="Full Name">
+
+      <div class="row">
+        <input type="email" id="email" name="email" placeholder="Email">
+        <input type="text" id="phone" name="phone" placeholder="Phone">
+      </div>
+
+      <input type="text" id="00NKa00000gGObY" name="00NKa00000gGObY" placeholder="Order Number">
+
+      <!-- CASE DETAILS -->
+      <div class="section-title">Case Details</div>
+
+      <input type="text" id="subject" name="subject" placeholder="Subject">
+
+      <div class="row">
+        <select id="status" name="status">
+          <option value="">Status</option>
+          <option value="New">New</option>
+          <option value="Working">Working</option>
+          <option value="Waiting on Customer">Waiting on Customer</option>
+          <option value="Reply Received">Reply Received</option>
+          <option value="Escalated">Escalated</option>
+          <option value="Closed">Closed</option>
+        </select>
+
+        <select id="priority" name="priority">
+          <option value="">Priority</option>
+          <option value="Critical">Critical</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+
+      <textarea name="description" placeholder="Describe your issue"></textarea>
+
+      <button class="submit-btn" type="submit">Submit Case</button>
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
