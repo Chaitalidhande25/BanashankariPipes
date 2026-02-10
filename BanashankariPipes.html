@@ -1,104 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Banashankari Pipes – Web to Lead</title>
+<meta charset="UTF-8">
+<title>Banashankari Pipes – Web to Lead</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #eaf3ff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eaf3ff;
+}
 
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
+.container {
+  display: flex;
+  min-height: 100vh;
+}
 
-    /* LEFT PANEL */
-    .left-panel {
-      width: 35%;
-      background: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px;
-    }
+/* LEFT PANEL */
+.left-panel {
+  width: 35%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
 
-    .left-panel img {
-      max-width: 260px;
-      margin-bottom: 20px;
-    }
+.left-panel img {
+  max-width: 260px;
+  margin-bottom: 25px;
+}
 
-    .left-panel p {
-      font-size: 14px;
-      color: #333;
-      line-height: 1.6;
-    }
+.left-panel p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
 
-    /* RIGHT PANEL */
-    .right-panel {
-      width: 65%;
-      background: #cfe2ff;
-      padding: 40px;
-    }
+/* RIGHT PANEL */
+.right-panel {
+  width: 65%;
+  background: #cfe2ff; /* light-medium blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
 
-    .form-box {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 800px;
-      margin: auto;
-    }
+.form-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 850px;
+  padding: 35px;
+  border-radius: 10px;
+}
 
-    .form-row {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 15px;
-    }
+/* FORM */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+}
 
-    .form-group {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+.form-group {
+  flex: 1;
+}
 
-    label {
-      font-size: 13px;
-      margin-bottom: 5px;
-      color: #333;
-    }
+label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
 
-    input, textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-    textarea {
-      resize: none;
-    }
+textarea {
+  resize: none;
+}
 
-    .submit-btn {
-      margin-top: 20px;
-      background: #0b5ed7;
-      color: white;
-      border: none;
-      padding: 12px;
-      width: 100%;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.section-title {
+  font-weight: bold;
+  margin: 25px 0 15px;
+  border-left: 4px solid #0b5ed7;
+  padding-left: 10px;
+  color: #0b5ed7;
+}
 
-    .submit-btn:hover {
-      background: #094bb5;
-    }
-  </style>
+.submit-btn {
+  margin-top: 25px;
+  width: 100%;
+  background: #0b5ed7;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #094bb5;
+}
+</style>
 </head>
 
 <body>
@@ -107,30 +119,30 @@
 
   <!-- LEFT PANEL -->
   <div class="left-panel">
-    <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5&d=/a/Ka000001mHff/9Jx0w1WRKldz5f9B6qWuPmQuNOwVXr7JFmphDvtRobg&operationContext=DELIVERY&viewId=05HKa000005EQngMAG&dpt="
-         alt="Banashankari Pipes Logo">
+    <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5&d=/a/Ka000001mHff/9Jx0w1WRKldz5f9B6qWuPmQuNOwVXr7JFmphDvtRobg&operationContext=DELIVERY&viewId=05HKa000005EQngMAG&dpt=">
 
     <p>
       <strong>Banashankari Pipes Pvt. Ltd.</strong><br>
       © All rights reserved.<br><br>
       Need help?<br>
-      Contact us at<br>
       <strong>support@banashankaripipes.com</strong>
     </p>
   </div>
 
   <!-- RIGHT PANEL -->
   <div class="right-panel">
-    <div class="form-box">
+    <div class="form-card">
 
       <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
             method="POST">
 
+        <!-- Salesforce -->
         <input type="hidden" name="oid" value="00DKa00000EKrFN">
         <input type="hidden" name="retURL"
                value="https://chaitalidhande25.github.io/BanashankariPipes/Thank%20You.html">
 
-        <!-- NAME -->
+        <div class="section-title">Contact Information</div>
+
         <div class="form-row">
           <div class="form-group">
             <label>First Name</label>
@@ -142,7 +154,6 @@
           </div>
         </div>
 
-        <!-- CONTACT -->
         <div class="form-row">
           <div class="form-group">
             <label>Email</label>
@@ -154,7 +165,6 @@
           </div>
         </div>
 
-        <!-- COMPANY -->
         <div class="form-row">
           <div class="form-group">
             <label>Company</label>
@@ -162,7 +172,8 @@
           </div>
         </div>
 
-        <!-- ADDRESS (ORDER AS REQUESTED) -->
+        <div class="section-title">Address Details</div>
+
         <div class="form-row">
           <div class="form-group">
             <label>Country</label>
@@ -179,23 +190,22 @@
             <label>City</label>
             <input type="text" name="city">
           </div>
-        </div>
-
-        <div class="form-row">
+          <div class="form-row">
           <div class="form-group">
             <label>Street</label>
             <textarea name="street" rows="2"></textarea>
           </div>
         </div>
-
-        <div class="form-row">
           <div class="form-group">
             <label>Pincode</label>
             <input type="text" name="zip">
           </div>
         </div>
 
-        <!-- PRODUCT -->
+        
+
+        <div class="section-title">Product Interest</div>
+
         <div class="form-row">
           <div class="form-group">
             <label>Product Interested</label>
@@ -206,6 +216,7 @@
         <button type="submit" class="submit-btn">Submit</button>
 
       </form>
+
     </div>
   </div>
 
