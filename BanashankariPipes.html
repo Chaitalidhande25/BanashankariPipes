@@ -35,6 +35,7 @@ body {
 .left-panel img {
   max-width: 220px;
   margin-bottom: 25px;
+  object-fit: contain;
 }
 
 .left-panel p {
@@ -122,6 +123,32 @@ textarea {
   cursor: pointer;
   margin-top: 30px;
 }
+
+/* ===== SPACING & ALIGNMENT POLISH ===== */
+.right-panel form > input,
+.right-panel form > textarea,
+.right-panel form > select,
+.right-panel .row {
+  margin-bottom: 16px;
+}
+
+.right-panel textarea[name="street"] {
+  margin-top: 4px;
+}
+
+/* Two-column rows spacing */
+.row input {
+  flex: 1;
+}
+
+.row input:first-child {
+  margin-right: 0;
+}
+
+/* Product Box spacing */
+.product-box button.add-btn {
+  margin-top: 10px;
+}
 </style>
 
 <script>
@@ -164,13 +191,9 @@ function prepareProducts() {
   <div class="left-panel">
     <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5">
     <p>
-      <strong>Banashankari Pipes Pvt. Ltd.</strong>
-
-      All rights reserved.
-
-
-      Need help?
-
+      <strong>Banashankari Pipes Pvt. Ltd.</strong><br>
+      All rights reserved.<br><br>
+      Need help?<br>
       support@banashankaripipes.com
     </p>
   </div>
@@ -242,4 +265,3 @@ function prepareProducts() {
 
 </body>
 </html>
- 
