@@ -136,7 +136,6 @@ textarea {
   margin-top: 4px;
 }
 
-/* Two-column rows spacing */
 .row input {
   flex: 1;
 }
@@ -145,7 +144,6 @@ textarea {
   margin-right: 0;
 }
 
-/* Product Box spacing */
 .product-box button.add-btn {
   margin-top: 10px;
 }
@@ -187,7 +185,6 @@ function prepareProducts() {
 
 <div class="container">
 
-  <!-- LEFT PANEL -->
   <div class="left-panel">
     <img src="https://macpac-demo.my.salesforce.com/sfc/dist/version/download/?oid=00DKa00000EKrFN&ids=068Ka00000TAGXWIA5&d=/a/Ka000001mHff/9Jx0w1WRKldz5f9B6qWuPmQuNOwVXr7JFmphDvtRobg&operationContext=DELIVERY&viewId=05HKa000005EW5zMAG&dpt=">
     <p>
@@ -198,17 +195,14 @@ function prepareProducts() {
     </p>
   </div>
 
-  <!-- RIGHT PANEL -->
   <div class="right-panel">
 
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
           method="POST"
           onsubmit="prepareProducts()">
 
-      <!-- Salesforce Org ID -->
       <input type="hidden" name="oid" value="00DKa00000EKrFN">
 
-      <!-- Thank You Page -->
       <input type="hidden" name="retURL"
              value="https://chaitalidhande25.github.io/BanashankariPipes/Thank%20You.html">
 
@@ -228,16 +222,18 @@ function prepareProducts() {
 
       <div class="section-title">Address Details</div>
 
-      <input type="text" name="country" placeholder="Country">
-
-      <div class="row">
-        <input type="text" name="state" placeholder="State">
-        <input type="text" name="city" placeholder="City">
-      </div>
+      <!-- REARRANGED ADDRESS ORDER -->
 
       <textarea name="street" placeholder="Street"></textarea>
 
       <input type="text" name="zip" placeholder="Pincode">
+
+      <div class="row">
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="state" placeholder="State">
+      </div>
+
+      <input type="text" name="country" placeholder="Country">
 
       <div class="section-title">Product Interested</div>
 
@@ -252,7 +248,6 @@ function prepareProducts() {
         <button type="button" class="add-btn" onclick="addProduct()">+ Add Product</button>
       </div>
 
-      <!-- Salesforce Custom Field (Hidden) -->
       <textarea id="00NKa00000V5zB7"
                 name="00NKa00000V5zB7"
                 style="display:none"></textarea>
