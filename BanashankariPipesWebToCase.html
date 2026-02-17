@@ -107,7 +107,6 @@ textarea {
   margin-top: 4px;
 }
 
-/* Two-column rows spacing */
 .row input,
 .row select {
   flex: 1;
@@ -144,6 +143,9 @@ textarea {
 
       <input type="hidden" id="external" name="external" value="1">
 
+      <!-- HIDDEN STATUS FIELD (Default = New) -->
+      <input type="hidden" name="status" value="New">
+
       <!-- CONTACT INFORMATION -->
       <div class="section-title">Contact Information</div>
 
@@ -162,16 +164,18 @@ textarea {
       <input type="text" id="subject" name="subject" placeholder="Subject">
 
       <div class="row">
-        <select id="status" name="status">
-          <option value="">Status</option>
-          <option value="New">New</option>
-          <option value="Working">Working</option>
-          <option value="Waiting on Customer">Waiting on Customer</option>
-          <option value="Reply Received">Reply Received</option>
-          <option value="Escalated">Escalated</option>
-          <option value="Closed">Closed</option>
+
+        <!-- CASE REASON (Replaces Status Dropdown) -->
+        <select id="reason" name="reason">
+          <option value="">Case Reason</option>
+          <option value="User didn&#39;t attend training">User didn't attend training</option>
+          <option value="Complex functionality">Complex functionality</option>
+          <option value="Existing problem">Existing problem</option>
+          <option value="Instructions not clear">Instructions not clear</option>
+          <option value="New problem">New problem</option>
         </select>
 
+        <!-- PRIORITY (Unchanged) -->
         <select id="priority" name="priority">
           <option value="">Priority</option>
           <option value="Critical">Critical</option>
@@ -179,6 +183,7 @@ textarea {
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
         </select>
+
       </div>
 
       <textarea name="description" placeholder="Describe your issue"></textarea>
